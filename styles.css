@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: beige;
+}
+
+main {
+  position: relative;
+  /* background: cyan; */
+  margin: 0 auto;
+  width: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  aspect-ratio: 409/450;
+}
+
+img {
+  /* 2454 × 2700 */
+  opacity: 0.5;
+  width: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  aspect-ratio: 409/450;
+  position: absolute;
+  top: 0; left: 0;
+  display: block;
+}
+
+svg {
+  width: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  aspect-ratio: 409/450;
+  border: 1px solid black;
+  position: absolute;
+  top: 0; left: 0;
+}
