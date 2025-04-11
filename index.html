@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeremy Haslam</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="scripts.js"></script>
+  <script type="module" src="coords.js"></script>
 </head>
 <body>
   
 <main>
 
-  <img src="original.jpg" alt="">
-  <svg id="jeremy_svg" viewBox="0 0 1000 1000" width="1000" height="1000" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+  <img id="jeremy_img" src="original.jpg" alt="original" width="1227" height="1350">
+  <section>
+
+  </section>
+  <svg id="jeremy_svg" viewBox="0 0 1227 1350" width="1227" height="1350" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     <defs id="gradients">
-      <linearGradient id="two_greens_fade">
+      <!-- <linearGradient id="two_greens_fade">
         <stop offset="0%" stop-color="rgb(7, 70, 31)"/>
         <stop offset="100%" stop-color="rgb(22, 126, 32)"/>
       </linearGradient>
@@ -23,16 +28,18 @@
         <stop offset="50%" stop-color="rgb(75, 90, 76)" stop-opacity="0.5"/>
         <stop offset="75%" stop-color="rgb(54, 92, 70)" stop-opacity="0.3"/>
         <stop offset="100%" stop-color="rgb(54, 92, 70)" stop-opacity="0"/>
-      </radialGradient>
+      </radialGradient> -->
     </defs>
-
     <g id="colour_blocks">
-      <path id="shape_01" d="M 9 457 L 50 486 190 380 200 380 200 350 225 350 226 299 109 385 96 400 56 393  83 410 26 444 9 456" fill="url(#black_green_white_fade)"/>
-      
+      <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27"  stroke="rgb(188,198,190)" fill="none"></rect>
+<!-- rgb(188,198,190) rgb(211,244,243) -->
+
+
+
+
     </g>
   </svg>
 </main>
-
 
 </body>
 </html>
