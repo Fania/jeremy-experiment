@@ -72,5 +72,5 @@ svg {
 
 
 #main_frame {
-  filter: drop-shadow(0 -30px 30px black);
+  /* filter: drop-shadow(0 -30px 30px black); */
 }
