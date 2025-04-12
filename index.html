@@ -19,16 +19,17 @@
   <svg id="jeremy_svg" viewBox="0 0 1227 1350" width="1227" height="1350" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     <defs id="gradients">
       <linearGradient id="main_frame_fade"
-                      gradientTransform="rotate(0)">
+                      gradientTransform="rotate(90)">
+        <!-- <stop offset="0%" stop-color="rgb(208,246,243)" stop-opacity="0.5"/> -->
         <stop offset="0%" stop-color="rgb(208,246,243)" stop-opacity="0.5"/>
         <stop offset="50%" stop-color="rgb(209,214,202)" stop-opacity="0.5"/>
-        <stop offset="100%" stop-color="rgb(209,214,202)" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="rgb(208,246,243)" stop-opacity="1"/>
       </linearGradient>
       <linearGradient id="main_frame2_fade"
-                      gradientTransform="rotate(90)">
+                      gradientTransform="rotate(0)">
         <stop offset="0%" stop-color="rgb(186,207,207)" stop-opacity="0.5"/>
-        <stop offset="50%" stop-color="rgb(187,196,193)" stop-opacity="0.2"/>
-        <stop offset="100%" stop-color="rgb(208,246,243)" stop-opacity="0"/>
+        <stop offset="50%" stop-color="rgb(187,196,193)" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="rgb(209,214,202)" stop-opacity="1"/>
       </linearGradient>
 
       <linearGradient id="main_frame_floor_fade">
@@ -92,11 +93,11 @@
     <g id="colour_blocks">
 
       <g id="frame">
-        <rect id="main_frame2" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame2_fade)" fill="none"></rect>
         <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame_fade)" fill="none"></rect>
+        <rect id="main_frame2" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame2_fade)" fill="none"></rect>
 
-        <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect> -->
-        <!-- <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect> -->
+        <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect>
+        <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect> -->
 
         <polygon id="main_frame_top_inner" points="76,100 1152,100 1135,130 100,135" fill="url(#main_frame_top_inner_fade)"/>
         <polygon id="main_frame_left_inner" points="76,100 76,1272 100,1262 100,135" fill="url(#main_frame_left_inner_fade)"/>
