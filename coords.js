@@ -4,7 +4,9 @@
 const svg_elem = document.getElementById('jeremy_svg');
 
 const jeremy_coords_g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-jeremy_coords_g.setAttribute("class", "coordinates");
+// hide by default
+jeremy_coords_g.setAttribute("class", "coordinates hide");
+
 const jeremy_vertical_g = document.createElementNS("http://www.w3.org/2000/svg", "g");
 jeremy_vertical_g.setAttribute("class", "vertical");
 const jeremy_horizontal_g = document.createElementNS("http://www.w3.org/2000/svg", "g");

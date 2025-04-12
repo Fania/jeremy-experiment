@@ -68,3 +68,9 @@ svg {
   stroke: black;
   fill: black;
 }
+
+
+
+#main_frame {
+  filter: drop-shadow(0 -30px 30px black);
+}

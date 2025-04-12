@@ -18,11 +18,57 @@
   </section>
   <svg id="jeremy_svg" viewBox="0 0 1227 1350" width="1227" height="1350" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     <defs id="gradients">
-      <!-- <linearGradient id="two_greens_fade">
-        <stop offset="0%" stop-color="rgb(7, 70, 31)"/>
-        <stop offset="100%" stop-color="rgb(22, 126, 32)"/>
+      <linearGradient id="main_frame_floor_fade">
+        <stop offset="0%" stop-color="rgb(121,121,113)"/>
+        <stop offset="15%" stop-color="rgb(195,210,203)"/>
+        <stop offset="85%" stop-color="rgb(192,197,189)"/>
+        <stop offset="100%" stop-color="rgb(121,127,120)"/>
       </linearGradient>
-      <radialGradient id="gray_transparent_fade" cx="30%" cy="50%" r="120%">
+      <linearGradient id="main_frame_floor2_fade2"
+                      gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="rgb(121,121,113)" stop-opacity="0"/>
+        <stop offset="15%" stop-color="rgb(195,210,203)" stop-opacity="0"/>
+        <stop offset="85%" stop-color="rgb(192,197,189)" stop-opacity="0"/>
+        <stop offset="100%" stop-color="rgb(121,127,120)" stop-opacity="1"/>
+      </linearGradient>
+
+
+      <linearGradient id="main_frame_top_inner_fade">
+        <stop offset="0%" stop-color="rgb(136,130,117)"/>
+        <stop offset="15%" stop-color="rgb(176,191,188)"/>
+        <stop offset="40%" stop-color="rgb(175,184,178)"/>
+        <stop offset="80%" stop-color="rgb(168,177,174)"/>
+        <stop offset="100%" stop-color="rgb(108,113,105)"/>
+      </linearGradient>
+      <linearGradient id="main_frame_left_inner_fade">
+        <stop offset="0%" stop-color="rgb(117,116,111)"/>
+        <stop offset="60%" stop-color="rgb(175,184,178)"/>
+        <stop offset="100%" stop-color="rgb(176,191,188)"/>
+      </linearGradient>
+      <linearGradient id="main_frame_left_inner2_fade2"
+                      gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="rgb(117,116,111)" stop-opacity="0.5"/>
+        <stop offset="10%" stop-color="rgb(117,116,111)" stop-opacity="0"/>
+        <stop offset="90%" stop-color="rgb(117,116,111)" stop-opacity="0"/>
+        <stop offset="100%" stop-color="rgb(117,116,111)" stop-opacity="0.5"/>
+      </linearGradient>
+      <linearGradient id="main_frame_right_inner_fade">
+        <stop offset="0%" stop-color="rgb(175,184,178)"/>
+        <stop offset="60%" stop-color="rgb(168,177,174)"/>
+        <stop offset="100%" stop-color="rgb(117,116,111)"/>
+      </linearGradient>
+      <linearGradient id="main_frame_right_inner2_fade2"
+                      gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="rgb(117,116,111)" stop-opacity="0.5"/>
+        <stop offset="30%" stop-color="rgb(117,116,111)" stop-opacity="0"/>
+        <stop offset="60%" stop-color="rgb(117,116,111)" stop-opacity="0"/>
+        <stop offset="100%" stop-color="rgb(117,116,111)" stop-opacity="0.5"/>
+      </linearGradient>
+
+
+
+
+      <!-- <radialGradient id="gray_transparent_fade" cx="30%" cy="50%" r="120%">
         <stop offset="0%" stop-color="rgb(128, 154, 147)" stop-opacity="0.9"/>
         <stop offset="25%" stop-color="rgb(95, 108, 97)" stop-opacity="0.7"/>
         <stop offset="50%" stop-color="rgb(75, 90, 76)" stop-opacity="0.5"/>
@@ -31,11 +77,25 @@
       </radialGradient> -->
     </defs>
     <g id="colour_blocks">
-      <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27"  stroke="rgb(188,198,190)" fill="none"></rect>
-<!-- rgb(188,198,190) rgb(211,244,243) -->
+      <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="cyan" fill="none"></rect>
+
+      <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect>
+      <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade2)"></rect> -->
+
+      <polygon id="main_frame_top_inner" points="76,100 1152,100 1135,130 100,135" fill="url(#main_frame_top_inner_fade)"/>
+      <polygon id="main_frame_left_inner" points="76,100 76,1272 100,1262 100,135" fill="url(#main_frame_left_inner_fade)"/>
+      <polygon id="main_frame_left_inner2" points="76,100 76,1272 100,1262 100,135" fill="url(#main_frame_left_inner2_fade2)"/>
+
+      <polygon id="main_frame_right_inner" points="1152,100 1135,130 1130,1265 1152,1272" fill="url(#main_frame_right_inner_fade)"/>
+      <polygon id="main_frame_right_inner2" points="1152,100 1135,130 1130,1265 1152,1272" fill="url(#main_frame_right_inner2_fade2)"/>
+
+      <polygon id="main_frame_bottom_inner" points="75,1272 1152,1272 1130,1265 100,1260" fill="salmon"/>
 
 
 
+<!-- 
+
+-->
 
     </g>
   </svg>
