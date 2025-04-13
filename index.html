@@ -96,7 +96,21 @@
         <stop offset="100%" stop-color="rgb(229,58,9)"/>
       </linearGradient>
 
+      <pattern id="bottom_left_inner_shape_pattern"
+                x="0" y="0" width=".111" height="1"
+                patternTransform="rotate(315.65)"> 
+        <rect x="0" y="0" width="225" height="275" fill="rgb(69,39,8)"></rect>
+        <line x1="20" y1="0" x2="20" y2="275" stroke="rgb(204,229,236)" stroke-width="8"/>
+        <line x1="10" y1="0" x2="10" y2="275" stroke="rgb(115,93,49)" stroke-width="8"/>
+      </pattern>
 
+      <filter id="inset_shadow">
+        <feFlood flood-color="rgb(0,0,0,0.7)"/>
+        <feComposite operator="out" in2="SourceGraphic" />
+        <feMorphology operator="dilate" radius="10"/>
+        <feGaussianBlur stdDeviation="10" />
+        <feComposite operator="atop" in2="SourceGraphic"/>
+      </filter>
 
 
       <!-- <radialGradient id="gray_transparent_fade" cx="30%" cy="50%" r="120%">
@@ -134,9 +148,17 @@
         <polygon id="orange_block_right" points="915,833 1005,912 952,810" fill="url(#orange_block_right_fade)"/>
       </g>
 
+      <!-- <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)" style="z-index: -2;filter:drop-shadow(2px 4px 2px rgba(0,0,0,0.5));"/> -->
+      <!-- <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/> -->
+      <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
+
+
+
+
 
 <!-- 
-
+225px wide
+275px tall
 -->
 
     </g>
