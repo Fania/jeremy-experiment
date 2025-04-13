@@ -79,3 +79,8 @@ svg {
 #bottom_left_inner_shape {
   /* box-shadow: inset 12px 12px 2px 1px black; */
 }
+
+
+#top_left_shape {
+  filter: drop-shadow(-5px 4px 10px rgba(0,0,0,0.5));
+}

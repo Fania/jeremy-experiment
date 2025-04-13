@@ -103,12 +103,34 @@
         <line x1="20" y1="0" x2="20" y2="275" stroke="rgb(204,229,236)" stroke-width="8"/>
         <line x1="10" y1="0" x2="10" y2="275" stroke="rgb(115,93,49)" stroke-width="8"/>
       </pattern>
+      <pattern id="top_right_shape_pattern"
+                x="0" y="0" width=".03125" height="1"
+                patternTransform="rotate(57)"> 
+        <rect x="0" y="0" width="625" height="750" fill="rgb(0,0,0)"></rect>
+        <line x1="20" y1="0" x2="20" y2="750" stroke="rgb(194,207,195)" stroke-width="8"/>
+      </pattern>
 
       <filter id="inset_shadow">
         <feFlood flood-color="rgb(0,0,0,0.7)"/>
-        <feComposite operator="out" in2="SourceGraphic" />
+        <feComposite operator="out" in2="SourceGraphic"/>
         <feMorphology operator="dilate" radius="10"/>
         <feGaussianBlur stdDeviation="10" />
+        <feComposite operator="atop" in2="SourceGraphic"/>
+      </filter>
+      <filter id="inset_shadow1">
+        <feFlood flood-color="rgb(0,0,0,0.5)"/>
+        <feComposite operator="out" in2="SourceGraphic"/>
+        <feOffset in2="SourceGraphic" dx="-20" dy="10"></feOffset>
+        <feMorphology operator="dilate" radius="7"/>
+        <feGaussianBlur stdDeviation="5" />
+        <feComposite operator="atop" in2="SourceGraphic"/>
+      </filter>
+      <filter id="inset_shadow2">
+        <feFlood flood-color="rgb(0,0,0,0.5)"/>
+        <feComposite operator="out" in2="SourceGraphic"/>
+        <feOffset in2="SourceGraphic" dx="20" dy="10"></feOffset>
+        <feMorphology operator="dilate" radius="30"/>
+        <feGaussianBlur stdDeviation="20" />
         <feComposite operator="atop" in2="SourceGraphic"/>
       </filter>
 
@@ -127,8 +149,8 @@
         <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame_fade)" fill="none"></rect>
         <rect id="main_frame2" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame2_fade)" fill="none"></rect>
 
-        <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect>
-        <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect> -->
+        <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect> -->
+        <!-- <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect> -->
 
         <polygon id="main_frame_top_inner" points="76,100 1152,100 1135,130 100,135" fill="url(#main_frame_top_inner_fade)"/>
         <polygon id="main_frame_left_inner" points="76,100 76,1272 100,1262 100,135" fill="url(#main_frame_left_inner_fade)"/>
@@ -140,6 +162,91 @@
         <polygon id="main_frame_bottom_inner" points="75,1272 1152,1272 1130,1265 100,1260" fill="rgb(99,95,89)"/>
       </g>
 
+      <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)"/>
+      <path id="bottom_right_shape" d="M 1062,1163 Q 1040,898 966,726 Q 745,721 650,745 Q 676,966 637,1167 Q 828,1192 1062,1163" fill="rgb(154,140,127)"/>
+      <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/>
+      <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
+
+      <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
+      <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_shadow1) url(#inset_shadow2)" transform="rotate(-10)" transform-origin="785 545"/>
+  
+
+
+
+      <g id="yellow_line">
+        <path id="yellow_line_shape0" d="
+          M 718,942 
+          Q 700,965 722,966 
+          C 733,967 737,981 730,986
+          S 726,1003 734,1001
+          S 751,1011 742,1017
+          S 738,1033 751,1033
+          S 773,1036 765,1045
+          S 766,1060 775,1058
+          S 790,1068 782,1073 
+          S 777,1086 792,1085
+          S 812,1093 807,1101
+          S 815,1119 821,1110
+          S 840,1103 839,1114 
+          S 871,1130 871,1108
+          S 908,1080 910,1101
+          S 955,1133 943,1093
+          S 975,1065 975,1080
+          S 1025,1120 1020,1061
+          Q 1014,1037 1004,1031" 
+        fill="none" stroke="yellow" stroke-linecap="round" fill-rule="evenodd"/>
+        <!-- nonzero | evenodd -->
+        <path id="yellow_line_shape1" d="
+          M 718,942 
+          Q 700,965 722,966 
+          C 733,967 737,981 730,986
+          C 722,990 726,1003 734,1001
+          C 748,1000 751,1011 742,1017
+          C 732,1023 738,1033 751,1033
+          Q 760,1033 767,1036
+          C 767,1023 761,1027 756,1026
+          C 747,1026 744,1018 750,1011
+          Q 760,996 742,995
+          Q 730,995 735,981
+          Q 745,965 726,963
+          C 712,961 711,952 721,942
+          Z" fill="rgb(255,255,0,0.5)" stroke="none"/>
+        <path id="yellow_line_shape2" d="
+          M 765,1034
+          Q 772,1038 766,1045
+          C 761,1049 760,1062 778,1062
+          C 781,1061 783,1072 777,1072
+          C 771,1077 777,1092 799,1088
+          Q 803,1090 803,1099
+          C 797,1095 806,1132 823,1111
+          C 825,1104 833,1108 838,1117
+          C 842,1106 832,1099 821,1107
+          Q 818,1106 813,1111
+          C 810,1114 804,1109 807,1101
+          C 811,1096 811,1086 793,1084
+          C 777,1088 780,1076 786,1072
+          C 788,1066 784,1057 775,1058
+          C 763,1058 766,1048 769,1044
+          C 773,1041 771,1035 766,1032
+          Z" fill="rgb(255,255,0,0.5)" stroke="none"/>
+        <path id="yellow_line_shape3" d="
+          M 840,1113
+          C 840,1128 870,1128 871,1106
+          C 872,1088 908,1078 910,1104
+          C 925,1130 955,1122 943,1094
+          C 930,1062 962,1055 973,1071
+          C 980,1111 1029,1105 1019,1060
+          Q 1015,1040 1002,1029
+          L 1019,1024
+          Q 1023,1049 1021,1069
+          C 1014,1090 990,1098 977,1075
+          C 968,1064 943,1060 941,1086
+          C 946,1117 920,1120 911,1099
+          C 900,1075 870,1083 868,1104
+          C 867,1122 850,1126 840,1113" 
+          fill="rgb(255,255,0,0.5)" stroke="none"/>
+      </g>
+
       <g id="orange_block">
         <polygon id="orange_block_top_left" points="762,887 824,909 915,833 952,810 904,828" fill="url(#orange_block_top_left_fade)"/>
         <polygon id="orange_block_middle" points="824,909 884,1027 1005,912 915,833" fill="rgb(251,91,9)"/>
@@ -148,34 +255,13 @@
         <polygon id="orange_block_right" points="915,833 1005,912 952,810" fill="url(#orange_block_right_fade)"/>
       </g>
 
-      <!-- <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)" style="z-index: -2;filter:drop-shadow(2px 4px 2px rgba(0,0,0,0.5));"/> -->
-      <!-- <path id="bottom_right_shape" d="M 1062,1163 Q 1040,898 966,726 Q 745,721 650,745 Q 676,966 637,1167 Q 828,1192 1062,1163" fill="rgb(154,140,127)"/> -->
-      <!-- <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/> -->
-      <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
-      
-      <!-- <path id="yellow_line_shape" d="M 716,940 Q 700,965 732,971 T 727,996 T  727,996 T 747,1005 T 739,1030 T 769,1036 T 764,1056 T 787,1063 T 780,1085 T 810,1089 T 808,1115 T 834,1104 T 858,1124 T 895,1086 T 936,1120 T 956,1063 T 1008,1095 T 1004,1030" fill="none" stroke="yellow" stroke-width="3" stroke-linecap="round"/> -->
-      <path id="yellow_line_shape" d="M 716,940 Q 700,965 722,966 
-      C 733,967 737,981 730,986
-      S 726,1003 734,1001
-      S 751,1011 742,1017
-      S 738,1033 751,1033
-      S 773,1036 765,1045
-      S 766,1060 775,1058
-      S 790,1068 782,1073 
-      S 777,1086 792,1085
-      S 812,1093 807,1101
-      S 815,1119 821,1110
-      S 840,1103 839,1114 
-      S 871,1130 871,1108
-      S 908,1080 910,1101
-      S 955,1133 943,1093
-      S 975,1065 975,1080
-      S 1025,1120 1020,1061
-      Q 1013,1035 1003,1030" fill="none" stroke="yellow" stroke-width="3" stroke-linecap="round" fill-rule="evenodd"/>
-      <!-- nonzero | evenodd -->
+
+
 
 <!-- 
-
+274, 505)
+scripts.js:11 (1076, 630)
+scripts.js:11 (953, 186)
 -->
 
     </g>
