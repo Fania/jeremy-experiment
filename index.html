@@ -154,11 +154,14 @@
       <g id="shapes">
         <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)"/>
         <path id="bottom_right_shape" d="M 1062,1163 Q 1040,898 966,726 Q 745,721 650,745 Q 676,966 637,1167 Q 828,1192 1062,1163" fill="rgb(154,140,127)"/>
-        <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/>
-        <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
-
-        <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
-        <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_right_shadow) url(#inset_left_shadow)" transform="rotate(-10)" transform-origin="785 545"/>
+        <g id="bottom_left">
+          <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/>
+          <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
+        </g>
+        <g id="top_right">
+          <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
+          <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_right_shadow) url(#inset_left_shadow)" transform="rotate(-10)" transform-origin="785 545"/>
+        </g>
       </g>
 
       <g id="yellow_line">

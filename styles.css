@@ -14,7 +14,6 @@ body {
 main {
   position: relative;
   margin: 0 auto;
-  /* width: auto; */
   width: 100%;
   max-height: 100vh;
   object-fit: contain;
@@ -36,7 +35,6 @@ img {
 svg {
  /* 1227 × 1350 */
   width: 100%;
-  /* width: auto; */
   height: 100vh;
   max-height: 100vh;
   object-fit: contain;
@@ -71,7 +69,7 @@ svg {
 
 #orange_block {
   transform-origin: 900px 925px;
-  animation: 5s infinite reverse linear orangeBlock;
+  animation: 10s infinite reverse linear orangeBlock;
 }
 @keyframes orangeBlock {
   to {
@@ -80,7 +78,7 @@ svg {
 }
 #yellow_line {
   transform-origin: 900px 925px;
-  animation: 10s infinite normal linear yellowLine;
+  animation: 15s infinite normal linear yellowLine;
 }
 @keyframes yellowLine {
   to {
@@ -90,10 +88,66 @@ svg {
 
 
 #bottom_left_inner_shape_pattern {
-  animation: 20s infinite normal linear patternTest;
+  animation: 30s infinite normal linear shapePattern;
 }
-@keyframes patternTest {
+@keyframes shapePattern {
   to { /* rotates the pattern by x degrees every 20s and shifts them along */
     transform: translate3d(10px,-10px,0);
   }
 }
+
+
+
+#bottom_left {
+  transform-origin: 425px 925px;
+  animation: 40s infinite normal linear bottomLeft;
+}
+@keyframes bottomLeft {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+#top_right_inner_shape {
+  animation: 10s infinite alternate linear shapeColour;
+}
+@keyframes shapeColour {
+  to {
+    fill: rgb(255,0,0);
+  }
+}
+
+
+
+#top_left_shape {
+  transform-origin: 450px 425px;
+  animation: 20s infinite alternate linear topLeft;
+}
+@keyframes topLeft {
+  to {
+    transform: translate3d(-40px,-50px,0) rotate(-20deg);
+  }
+}
+
+
+#top_right {
+  transform-origin: 725px 550px;
+  animation: 10s infinite alternate linear topRight;
+}
+@keyframes topRight {
+  to {
+    transform: translate3d(60px,-40px,0);
+  }
+}
+
+
+/* #bottom_right_shape {
+  animation: 10s infinite alternate linear bottomRight;
+}
+@keyframes bottomRight {
+  to {
+    filter: none;
+  }
+} */
