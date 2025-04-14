@@ -67,3 +67,33 @@ svg {
 #orange_block {
   filter: drop-shadow(-5px 4px 10px rgba(0,0,0,0.5));
 }
+
+
+#orange_block {
+  transform-origin: 900px 925px;
+  animation: 5s infinite reverse linear orangeBlock;
+}
+@keyframes orangeBlock {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#yellow_line {
+  transform-origin: 900px 925px;
+  animation: 10s infinite normal linear yellowLine;
+}
+@keyframes yellowLine {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#bottom_left_inner_shape_pattern {
+  animation: 20s infinite normal linear patternTest;
+}
+@keyframes patternTest {
+  to { /* rotates the pattern by x degrees every 20s and shifts them along */
+    transform: translate3d(10px,-10px,0);
+  }
+}
