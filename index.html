@@ -117,7 +117,7 @@
         <feGaussianBlur stdDeviation="10" />
         <feComposite operator="atop" in2="SourceGraphic"/>
       </filter>
-      <filter id="inset_shadow1">
+      <filter id="inset_right_shadow">
         <feFlood flood-color="rgb(0,0,0,0.5)"/>
         <feComposite operator="out" in2="SourceGraphic"/>
         <feOffset in2="SourceGraphic" dx="-20" dy="10"></feOffset>
@@ -125,13 +125,20 @@
         <feGaussianBlur stdDeviation="5" />
         <feComposite operator="atop" in2="SourceGraphic"/>
       </filter>
-      <filter id="inset_shadow2">
+      <filter id="inset_left_shadow">
         <feFlood flood-color="rgb(0,0,0,0.5)"/>
         <feComposite operator="out" in2="SourceGraphic"/>
         <feOffset in2="SourceGraphic" dx="20" dy="10"></feOffset>
         <feMorphology operator="dilate" radius="30"/>
         <feGaussianBlur stdDeviation="20" />
         <feComposite operator="atop" in2="SourceGraphic"/>
+      </filter>
+      <filter id="out_up_shadow"
+        x="-20%" y="-20%" width="140%" height="140%" 
+        filterUnits="objectBoundingBox">
+        <feOffset result="offOut" in="SourceAlpha" dx="-2" dy="-10"/>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5"/>
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
       </filter>
 
 
@@ -149,8 +156,8 @@
         <rect id="main_frame" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame_fade)" fill="none"></rect>
         <rect id="main_frame2" x="62" y="86" width="1105" height="1200" stroke-width="27" stroke="url(#main_frame2_fade)" fill="none"></rect>
 
-        <!-- <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect> -->
-        <!-- <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect> -->
+        <rect id="main_frame_floor" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor_fade)"></rect>
+        <rect id="main_frame_floor2" x="75" y="100" width="1077" height="1172" fill="url(#main_frame_floor2_fade)"></rect>
 
         <polygon id="main_frame_top_inner" points="76,100 1152,100 1135,130 100,135" fill="url(#main_frame_top_inner_fade)"/>
         <polygon id="main_frame_left_inner" points="76,100 76,1272 100,1262 100,135" fill="url(#main_frame_left_inner_fade)"/>
@@ -168,7 +175,7 @@
       <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
 
       <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
-      <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_shadow1) url(#inset_shadow2)" transform="rotate(-10)" transform-origin="785 545"/>
+      <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_right_shadow) url(#inset_left_shadow)" transform="rotate(-10)" transform-origin="785 545"/>
   
 
 
@@ -210,7 +217,7 @@
           Q 730,995 735,981
           Q 745,965 726,963
           C 712,961 711,952 721,942
-          Z" fill="rgb(255,255,0,0.5)" stroke="none"/>
+          Z" fill="rgb(255,255,0,0.5)" filter="url(#out_up_shadow)" stroke="none"/>
         <path id="yellow_line_shape2" d="
           M 765,1034
           Q 772,1038 766,1045
@@ -228,7 +235,7 @@
           C 788,1066 784,1057 775,1058
           C 763,1058 766,1048 769,1044
           C 773,1041 771,1035 766,1032
-          Z" fill="rgb(255,255,0,0.5)" stroke="none"/>
+          Z" fill="rgb(255,255,0,0.5)" filter="url(#out_up_shadow)" stroke="none"/>
         <path id="yellow_line_shape3" d="
           M 840,1113
           C 840,1128 870,1128 871,1106
@@ -244,13 +251,13 @@
           C 946,1117 920,1120 911,1099
           C 900,1075 870,1083 868,1104
           C 867,1122 850,1126 840,1113" 
-          fill="rgb(255,255,0,0.5)" stroke="none"/>
+          fill="rgb(255,255,0,0.5)" filter="url(#out_up_shadow)" stroke="none"/>
       </g>
 
       <g id="orange_block">
         <polygon id="orange_block_top_left" points="762,887 824,909 915,833 952,810 904,828" fill="url(#orange_block_top_left_fade)"/>
-        <polygon id="orange_block_middle" points="824,909 884,1027 1005,912 915,833" fill="rgb(251,91,9)"/>
-        <polygon id="orange_block_left" points="762,887 875,1027 910,1055 910,1053 883,1026 824,909" fill="url(#orange_block_left_fade)"/>
+        <polygon id="orange_block_middle" points="824,909 883,1027 1005,912 915,833" fill="rgb(251,91,9)"/>
+        <polygon id="orange_block_left" points="762,887 875,1027 910,1055 912,1053 883,1026 824,909" fill="url(#orange_block_left_fade)"/>
         <polygon id="orange_block_bottom" points="883,1026 911,1054 1015,931 1005,912" fill="url(#orange_block_bottom_fade)"/>
         <polygon id="orange_block_right" points="915,833 1005,912 952,810" fill="url(#orange_block_right_fade)"/>
       </g>
