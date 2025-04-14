@@ -4,10 +4,11 @@
 
 body {
   margin: 0;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: beige;
+  height: 100vh;
 }
 
 main {
@@ -23,30 +24,23 @@ main {
 img {
   /* 2454 × 2700 */
   /* opacity: 0.5; */
-  /* width: 100%; */
-  /* max-height: 100vh; */
-  /* object-fit: contain; */
-  /* aspect-ratio: 409/450; */
+  width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  aspect-ratio: 409/450;
   position: absolute;
   top: 0; left: 0;
   display: none;
 }
 
-section {
-  /* width: 100%; */
-  /* max-height: 100vh; */
-  /* object-fit: contain; */
-  /* aspect-ratio: 409/450; */
-  position: absolute;
-  top: 0; left: 0;
-}
-
 svg {
  /* 1227 × 1350 */
-  /* width: 100%; */
-  /* max-height: 100vh; */
-  /* object-fit: contain; */
-  /* aspect-ratio: 409/450; */
+  width: 100%;
+  /* width: auto; */
+  height: 100vh;
+  max-height: 100vh;
+  object-fit: contain;
+  aspect-ratio: 409/450;
   border: 1px solid black;
   position: absolute;
   top: 0; left: 0;

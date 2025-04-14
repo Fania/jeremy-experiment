@@ -11,11 +11,7 @@
 <body>
   
 <main>
-
   <img id="jeremy_img" src="original.jpg" alt="original" width="1227" height="1350">
-  <section>
-
-  </section>
   <svg id="jeremy_svg" viewBox="0 0 1227 1350" width="1227" height="1350" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     <defs id="gradients">
       <linearGradient id="main_frame_fade"
@@ -30,7 +26,6 @@
         <stop offset="50%" stop-color="rgb(187,196,193)" stop-opacity="0.5"/>
         <stop offset="100%" stop-color="rgb(209,214,202)" stop-opacity="1"/>
       </linearGradient>
-
       <linearGradient id="main_frame_floor_fade">
         <stop offset="0%" stop-color="rgb(121,121,113)"/>
         <stop offset="15%" stop-color="rgb(195,210,203)"/>
@@ -44,7 +39,6 @@
         <stop offset="85%" stop-color="rgb(192,197,189)" stop-opacity="0"/>
         <stop offset="100%" stop-color="rgb(121,127,120)" stop-opacity="1"/>
       </linearGradient>
-
       <linearGradient id="main_frame_top_inner_fade">
         <stop offset="0%" stop-color="rgb(136,130,117)"/>
         <stop offset="15%" stop-color="rgb(176,191,188)"/>
@@ -76,7 +70,6 @@
         <stop offset="60%" stop-color="rgb(117,116,111)" stop-opacity="0"/>
         <stop offset="100%" stop-color="rgb(117,116,111)" stop-opacity="0.5"/>
       </linearGradient>
-
       <linearGradient id="orange_block_top_left_fade"
                       gradientTransform="rotate(45)">
         <stop offset="0%" stop-color="rgb(168,24,5)"/>
@@ -95,7 +88,6 @@
         <stop offset="40%" stop-color="rgb(246,93,10)"/>
         <stop offset="100%" stop-color="rgb(229,58,9)"/>
       </linearGradient>
-
       <pattern id="bottom_left_inner_shape_pattern"
                 x="0" y="0" width=".111" height="1"
                 patternTransform="rotate(315.65)"> 
@@ -109,7 +101,6 @@
         <rect x="0" y="0" width="625" height="750" fill="rgb(0,0,0)"></rect>
         <line x1="20" y1="0" x2="20" y2="750" stroke="rgb(194,207,195)" stroke-width="8"/>
       </pattern>
-
       <filter id="inset_shadow">
         <feFlood flood-color="rgb(0,0,0,0.7)"/>
         <feComposite operator="out" in2="SourceGraphic"/>
@@ -140,15 +131,6 @@
         <feGaussianBlur result="blurOut" in="offOut" stdDeviation="5"/>
         <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
       </filter>
-
-
-      <!-- <radialGradient id="gray_transparent_fade" cx="30%" cy="50%" r="120%">
-        <stop offset="0%" stop-color="rgb(128, 154, 147)" stop-opacity="0.9"/>
-        <stop offset="25%" stop-color="rgb(95, 108, 97)" stop-opacity="0.7"/>
-        <stop offset="50%" stop-color="rgb(75, 90, 76)" stop-opacity="0.5"/>
-        <stop offset="75%" stop-color="rgb(54, 92, 70)" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="rgb(54, 92, 70)" stop-opacity="0"/>
-      </radialGradient> -->
     </defs>
     <g id="colour_blocks">
 
@@ -169,16 +151,15 @@
         <polygon id="main_frame_bottom_inner" points="75,1272 1152,1272 1130,1265 100,1260" fill="rgb(99,95,89)"/>
       </g>
 
-      <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)"/>
-      <path id="bottom_right_shape" d="M 1062,1163 Q 1040,898 966,726 Q 745,721 650,745 Q 676,966 637,1167 Q 828,1192 1062,1163" fill="rgb(154,140,127)"/>
-      <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/>
-      <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
+      <g id="shapes">
+        <path id="top_left_shape" d="M 235,193 Q 171,407 167,665 Q 359,738 659,714 Q 735,523 700,300 Q 508,204 235,193" fill="rgb(169,158,117)"/>
+        <path id="bottom_right_shape" d="M 1062,1163 Q 1040,898 966,726 Q 745,721 650,745 Q 676,966 637,1167 Q 828,1192 1062,1163" fill="rgb(154,140,127)"/>
+        <path id="bottom_left_shape" d="M 237,669 Q 130,933 176,1145 Q 428,1275 674,1172 Q 666,949 715,775 Q 490,710 237,669" fill="rgb(220,131,48)"/>
+        <path id="bottom_left_inner_shape" d="M 284,1014 Q 412,1135 568,1080 Q 560,955 445,860 Q 335,889 284,1014" fill="url(#bottom_left_inner_shape_pattern)" filter="url(#inset_shadow)"/>
 
-      <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
-      <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_right_shadow) url(#inset_left_shadow)" transform="rotate(-10)" transform-origin="785 545"/>
-  
-
-
+        <path id="top_right_shape" d="M 274,505 C 380,980 850,960 1079,628 Q   1006,324 955,186 Q 450,252 274,505" fill="url(#top_right_shape_pattern)"/> 
+        <ellipse id="top_right_inner_shape" rx="170" ry="148" cx="785" cy="545" fill="rgb(233,180,4)" filter="url(#inset_right_shadow) url(#inset_left_shadow)" transform="rotate(-10)" transform-origin="785 545"/>
+      </g>
 
       <g id="yellow_line">
         <path id="yellow_line_shape0" d="
@@ -261,15 +242,6 @@
         <polygon id="orange_block_bottom" points="883,1026 911,1054 1015,931 1005,912" fill="url(#orange_block_bottom_fade)"/>
         <polygon id="orange_block_right" points="915,833 1005,912 952,810" fill="url(#orange_block_right_fade)"/>
       </g>
-
-
-
-
-<!-- 
-274, 505)
-scripts.js:11 (1076, 630)
-scripts.js:11 (953, 186)
--->
 
     </g>
   </svg>
